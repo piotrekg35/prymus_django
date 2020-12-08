@@ -1,0 +1,15 @@
+.menu{
+color: greenyellow;
+background-color: brown;
+float: left;
+width: 20%;
+height: 100%;
+}
+
+.reszta{
+    color:rgb(253, 38, 110);
+    background-color: cadetblue;
+    float: right;
+    width: 80%;
+    height: 100%;
+}
