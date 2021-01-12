@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cos.views import index,books_list
+from django.conf import settings
+from django.conf.urls.static import static
+from cos.views import index,books_list,book_details
 urlpatterns = [
     path('',index),
     path('admin/', admin.site.urls),
     path( 'lista/', books_list),
-    
-]
+    path( 'lista/<int:book_id>', book_details, name="book_details"),
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

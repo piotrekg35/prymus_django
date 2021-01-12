@@ -7,3 +7,6 @@ def index(request):
 def books_list(request):
     context ={"books": Book.objects.all()}
     return render (request, "lista.html",context)
+def book_details(request, book_id):
+    context={"book": Book.objects.get(id=book_id)}
+    return render (request, "book_details.html",context)
